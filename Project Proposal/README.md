@@ -5,7 +5,7 @@
 
 **Subtitle:** Your guide to your journey as a student!
 
-**Logo:**
+**Logo:** ![Project Logo](favicon.png)
 
 **Description:**
 *Survival Guide: Student Edition* aims to serve as a friendly online companion for navigating school life — from tackling deadlines and managing stress, to keeping motivation alive and finding balance between academics and fun.
