@@ -52,3 +52,6 @@ Whether you’re cramming for exams, struggling to stay focused, or just trying 
 
 2. **Pomodoro Timer:**
 JavaScript will be used to create a Pomodoro Timer. This feature encourages productivity by allowing users to focus for 25 minutes, followed by a short break. The timer counts down dynamically, with Start, Pause, and Reset controls handled by JavaScript.
+
+### Wireframe
+[View our Wireframe!](https://www.canva.com/design/DAG3JtugP8M/3hEu7dS_9qg_tiRW5xYBHA/edit?utm_content=DAG3JtugP8M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
