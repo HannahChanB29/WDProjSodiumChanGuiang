@@ -72,7 +72,7 @@ main {
 /* LEFT COLUMN */
 .left-column {flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 40px;}
 .intro {
-    background: linear-gradient(145deg, #a0a8c0, #98a1bc);
+    background: linear-gradient(145deg, #a5abbd, white);
     padding: 35px;
     border-radius: 25px;
     box-shadow: 0 15px 45px rgba(0,0,0,0.2);
@@ -119,7 +119,7 @@ main {
 .featured h2 {color: #444159; text-shadow: 2px 2px 5px rgba(0,0,0,0.15); font-size: 24px; margin-bottom: 20px;}
 /* ===== Featured Articles ===== */
 .featured-article {
-    background: linear-gradient(#253154, #a0a8c0); /* restored gradient color */
+    background: linear-gradient(90deg, #b49670, #4b362a);
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
@@ -130,7 +130,7 @@ main {
 .featured-article:hover {
     transform: translateY(-5px) scale(1.03) rotate(-0.5deg);
     box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-    background: linear-gradient(145deg, #a3abbf, #b0b7c7); /* slightly lighter gradient on hover */
+    background: linear-gradient(#4b362a); /* slightly lighter gradient on hover */
 }
 
 .article-header {
