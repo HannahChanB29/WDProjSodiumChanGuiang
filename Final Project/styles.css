@@ -8,6 +8,10 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
+.logo img {
+    width: 150px;
+    height: 130px;
+}
 header {
     background: linear-gradient(90deg, #ebd69f, #f0e5c2);
     box-shadow: 0 10px 30px rgba(0,0,0,0.25);
@@ -18,11 +22,16 @@ header h1 {
     color: black;
     font-size: 36px;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    margin-left: 200px;
+    margin-top: -120px;
+    margin-bottom: 10px;
 }
 header p.subtitle {
     font-size: 18px;
     color: black;
-    margin-top: 5px;
+    margin-top: 1px;
+    margin-left: 200px;
+    margin-bottom: 10px;
 }
 
 /* NAVIGATION */
@@ -78,7 +87,7 @@ main {
     box-shadow: 0 15px 45px rgba(0,0,0,0.2);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.intro:hover {
+.intro:hover    {
     transform: translateY(-10px) rotate(-1deg) scale(1.02);
     box-shadow: 0 25px 60px rgba(0,0,0,0.25);
 }
@@ -132,14 +141,12 @@ main {
     box-shadow: 0 25px 60px rgba(0,0,0,0.25);
     background: linear-gradient(#4b362a); /* slightly lighter gradient on hover */
 }
-
 .article-header {
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 20px;
 }
-
 .article-header img {
     width: 70px;
     height: 70px;
