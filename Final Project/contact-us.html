@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survival Guide: Student Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+
+    .left-column {flex: 1; min-width: 350px; display: flex; flex-direction: column; gap: 40px;}
+.feedback {
+    display: block;
+    float: left;
+    background: linear-gradient(90deg, #b49670, #4b362a);
+    padding: 35px;
+    border-radius: 30px;
+    width: 675px;
+    border: 4px solid white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.left-column h2 {
+    margin-left: 250px;
+    margin-bottom: 20px;
+}
+.contact {
+    position: absolute;
+    top: 350px;
+    right: 220px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact h2 {
+    margin-top: -30px;
+    margin-left: 65px;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-us {
+    display: block;
+    width: 450px;
+    height: 100px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #555879, #8889aa);
+    border-radius: 20px;
+    border: 4px solid #bdbee0;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    align-self: flex-end;
+}
+
+    .contact-us:hover {
+    transform: translateY(-5px) scale(1.03) rotate(-0.5deg);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    background: linear-gradient(#444159); /* slightly lighter gradient on hover */
+}
+
+    .cs img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 37px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+    .cs h4 {
+    margin: 0;
+    font-weight: 600;
+    color: white; /* text color to pop against gradient */
+    font-size: 16px;
+    margin-left: 95px;
+    margin-top: -54px;
+}
+    </style>
+
+<header>
+    <div class="logo"><img src="logo.png" alt="Project Logo"></div>
+    <div class="title">
+        <h1>Survival Guide: Student Edition</h1>
+        <p class="subtitle">Your guide to your journey as a student!</p>
+    </div>
+</header>
+
+<nav>
+<ul>
+<li><a href="homepage.html">Home</a></li>
+<li><a href="survival-tips.html">Survival Tips</a></li>
+<li><a href="thestudentzone.html">The Student Zone</a></li>
+<li><a href="about-us.html">About Us</a></li>
+</ul>
+</nav>
+
+<main>
+    <!--LEFT COLUMN-->
+<div class="left-column">
+    <h2>Send us your feedback!</h2>
+    <div class="feedback">
+            <div class="name">
+
+                <label for="fb1">Full Name:</label>
+                <input type="text" id="fb1" class="fb">
+
+                <label for="fb2">Email Address:</label>
+                <input type="text" id="fb2" class="fb"><br>
+
+                <label for="fb3">Subject:</label>
+                <input type="text" id="fb3" class="fb"><br>
+
+                <label for="fb4">Message:</label><br>
+                <textarea id="fb4" class="fb4" rows="15" cols="90" placeholder="Write your message here..."></textarea><br>
+
+                <a href="b2029hpgchan@pshs.edu.ph, b2029jatguiang@pshs.edu.ph?subject=Subject%20of%20the%20message&body=Hello%2C%20I%20would%20like%20to%20send%20a%20message.">
+                <button>Send Message!</button>
+                    </a>    
+    </div>
+</div>
+
+<!--RIGHT COLUMN-->
+<div class="right-column">
+    <div class="contact">
+        <h2>Contact Us!</h2>
+        <div class="contact-us" onclick="toggleArticle(this)">
+            <div class="cs">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGHJwIgi8_UMv--azYVL8vzHjEh40g2egHA&s" alt="Email 1">
+                <h4>b2029hpgchan@pshs.edu.ph</h4>
+            </div>
+        </div>
+        <div class="contact-us" onclick="toggleArticle(this)">
+            <div class="cs">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGHJwIgi8_UMv--azYVL8vzHjEh40g2egHA&s" alt="Email 2">
+                <h4>b2029jatguiang@pshs.edu.ph</h4>
+            </div>
+    </div>
+</div>
+</main>
+
+<footer>&copy; Chan & Guiang, 2025. All rights reserved.</footer>
+
+<script>
+
+// Toggle featured article
+function toggleArticle(article) {
+    const content = article.querySelector('.article-content');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
