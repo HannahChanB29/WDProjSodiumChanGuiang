@@ -3,32 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Zone</title>
+<title>The Student Zone | Survival Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
+<link rel="icon" type="image/png" href="logo.png">
 <style>
-/* ===== EXTRA STYLES FOR NOTEPAD + POMODORO ===== */
 
-/* Notepad container */
-.notepad {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 150vh;
+    overflow-x: hidden; 
+  }
+
+  header {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* ===== STUDENT ZONE INTRO ===== */
+  .student-zone-intro {
+    max-width: 900px;
+    margin: 40px auto 60px;
+    text-align: center;
+    color: #000000;
+  }
+  .student-zone-intro h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #000000;
+  }
+  .student-zone-intro p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #000000;
+  }
+
+  /* ===== SOFT DIVIDER ===== */
+  .divider {
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(to right, #3a3f7d, #f4d28d, #3a3f7d);
+    margin: 40px auto;
+    border-radius: 5px;
+  }
+
+  /* ===== EXTRA STYLES FOR NOTEPAD + POMODORO ===== */
+  .notepad {
     background: #fff8dc;
     border-radius: 15px;
     padding: 25px 30px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.25);
     background-image: repeating-linear-gradient(
-        to bottom,
-        #fff8dc,
-        #fff8dc 28px,
-        #f2e6c4 29px
+      to bottom,
+      #fff8dc,
+      #fff8dc 28px,
+      #f2e6c4 29px
     );
     position: relative;
     font-family: 'Playfair Display', serif;
-}
+  }
 
-
-
-/* To-do items */
-.todo-input {
+  .todo-input {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #c9b48e;
@@ -37,9 +78,8 @@
     outline: none;
     background: #fff4d4;
     font-size: 16px;
-}
-
-.add-btn {
+  }
+  .add-btn {
     background: #e8c48c;
     padding: 10px 15px;
     border-radius: 12px;
@@ -47,18 +87,14 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
+  }
+  .add-btn:hover { background: #f0d8a6; }
 
-.add-btn:hover {
-    background: #f0d8a6;
-}
-
-/* Task styling */
-ul.todo-list {
+  ul.todo-list {
     list-style: none;
     padding: 0;
-}
-ul.todo-list li {
+  }
+  ul.todo-list li {
     background: rgba(255,255,255,0.8);
     margin: 10px 0;
     padding: 12px 15px;
@@ -67,27 +103,23 @@ ul.todo-list li {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-}
-ul.todo-list li.checked {
+  }
+  ul.todo-list li.checked {
     text-decoration: line-through;
     color: #8b8b8b;
-}
-
-/* Delete button */
-.del-btn {
+  }
+  .del-btn {
     background: #d97c7c;
     border: none;
     color: white;
     padding: 6px 10px;
     border-radius: 8px;
     cursor: pointer;
-}
-.del-btn:hover {
-    background: #c56666;
-}
+  }
+  .del-btn:hover { background: #c56666; }
 
-/* ===== POMODORO TIMER (alarm clock style) ===== */
-.pomodoro-box {
+  /* ===== POMODORO TIMER ===== */
+  .pomodoro-box {
     background: #f8f3e6;
     padding: 35px;
     border-radius: 30px;
@@ -95,10 +127,8 @@ ul.todo-list li.checked {
     box-shadow: 0 20px 45px rgba(0,0,0,0.25);
     border: 4px solid #d9c8a2;
     position: relative;
-}
-
-.pomodoro-box::before,
-.pomodoro-box::after {
+  }
+  .pomodoro-box::before, .pomodoro-box::after {
     content: "";
     position: absolute;
     width: 35px;
@@ -107,21 +137,18 @@ ul.todo-list li.checked {
     border-radius: 50%;
     top: -20px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-.pomodoro-box::before {left: 40px;}
-.pomodoro-box::after {right: 40px;}
+  }
+  .pomodoro-box::before { left: 40px; }
+  .pomodoro-box::after { right: 40px; }
 
-/* Timer display */
-.timer-display {
+  .timer-display {
     font-size: 48px;
     font-weight: bold;
     color: #5a4b2f;
     margin: 20px 0;
     text-shadow: 0 2px 5px rgba(0,0,0,0.25);
-}
-
-/* Buttons */
-.timer-btn {
+  }
+  .timer-btn {
     background: #c5b18a;
     border: none;
     padding: 12px 20px;
@@ -132,149 +159,159 @@ ul.todo-list li.checked {
     cursor: pointer;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     transition: 0.3s;
-}
-
-.timer-btn:hover {
+  }
+  .timer-btn:hover {
     background: #e1cfa5;
     transform: scale(1.05);
-}
+  }
 
-/* Footer */
-footer {
+  /* Columns */
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding-top: 20px; 
+  }
+
+  /* Footer */
+  footer {
     background: linear-gradient(90deg, #ded3c4, #e1d7c9);
     text-align: center;
     padding: 30px;
-    margin-top: 320px;
     box-shadow: 0 -8px 20px rgba(0,0,0,0.15);
-    font-size: 15px; color: #555879;
+    font-size: 15px;
+    color: #555879;
+  }
+
+  h1, p {
+    margin: 0;
+    padding: 10px 0; 
 }
+
 </style>
 </head>
-
-
-
 <body>
 
 <header>
-    <h1>Survival Guide: Student Edition</h1>
-    <p class="subtitle">Your guide to your journey as a student!</p>
+    <div class="logo"><img src="logo.png" alt="Project Logo"></div>
+    <div class="title">
+        <h1>Survival Guide: Student Edition</h1>
+        <p class="subtitle">Your guide to your journey as a student!</p>
+    </div>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="survival-tips.html">Survival Tips</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-    </ul>
+  <ul>
+    <li><a href="homepage.html">Home</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="survival-tips.html">Survival Tips</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+  </ul>
 </nav>
 
-
 <!-- ================= MAIN CONTENT ================= -->
+<section class="student-zone-intro">
+  <h2>Welcome to the Student Zone</h2>
+  <p>
+    The Student Zone is your personal space to pause, plan, and refocus. School life can feel overwhelming at times — deadlines pile up, motivation runs low, and it’s easy to feel like there’s never enough time in the day. This space is designed to help you slow things down and take control, one task at a time.
+  </p>
+  <p>
+    Here, productivity isn’t about being perfect or doing everything at once. It’s about progress, balance, and being kind to yourself along the way. Use the to-do list to organize your thoughts and priorities, and let the Pomodoro Timer guide you into focused study sessions with proper breaks. Remember: surviving student life doesn’t mean pushing yourself endlessly — it means learning when to work, when to rest, and when to breathe.
+  </p>
+</section>
+
+<div class="divider"></div>
+
 <main>
-
-    <!-- LEFT COLUMN — NOTEPAD TO-DO LIST -->
-    <div class="left-column">
-        <div class="notepad">
-            <h2 style="margin-top:0;">To-Do List</h2>
-
-            <input type="text" id="todo-input" class="todo-input" placeholder="Write a task...">
-            <button class="add-btn" onclick="addTask()">Add Task</button>
-
-            <ul class="todo-list" id="todo-list"></ul>
-        </div>
+  <!-- LEFT COLUMN — NOTEPAD TO-DO LIST -->
+  <div class="left-column">
+    <div class="notepad">
+      <h2 style="margin-top:0;">To-Do List</h2>
+      <input type="text" id="todo-input" class="todo-input" placeholder="Write a task...">
+      <button class="add-btn" onclick="addTask()">Add Task</button>
+      <ul class="todo-list" id="todo-list"></ul>
     </div>
+  </div>
 
-
-    <!-- RIGHT COLUMN — POMODORO TIMER -->
-    <div class="right-column">
-        <div class="pomodoro-box">
-            <h2>Pomodoro Timer</h2>
-
-            <div class="timer-display" id="timer">25:00</div>
-
-            <button class="timer-btn" onclick="startTimer()">Start</button>
-            <button class="timer-btn" onclick="pauseTimer()">Pause</button>
-            <button class="timer-btn" onclick="resetTimer()">Reset</button>
-        </div>
+  <!-- RIGHT COLUMN — POMODORO TIMER -->
+  <div class="right-column">
+    <div class="pomodoro-box">
+      <h2>Pomodoro Timer</h2>
+      <div class="timer-display" id="timer">25:00</div>
+      <button class="timer-btn" onclick="startTimer()">Start</button>
+      <button class="timer-btn" onclick="pauseTimer()">Pause</button>
+      <button class="timer-btn" onclick="resetTimer()">Reset</button>
     </div>
-
+  </div>
 </main>
 
-
-
-<!-- FOOTER -->
 <footer>
-    © 2025 Student Survival Guide | All Rights Reserved
+  &copy; Chan & Guiang, 2025. All rights reserved.<br><br>
+  <small>
+    References: <br>
+    7 Mental health awareness tips for college students - Binghamton News. (n.d.). 7 Mental Health Awareness Tips for College Students | Binghamton News - Binghamton University. https://www.binghamton.edu/news/blog/story/4544/7-mental-health-awareness-tips-for-college-students <br>
+    Lparsons. (2024, November 21). 8 Time Management Tips for Students - Harvard Summer School. Harvard Summer School. https://summer.harvard.edu/blog/8-time-management-tips-for-students/ <br>
+    Student Mental Health and Education. (2025, July 9). Learning Policy Institute. https://learningpolicyinstitute.org/product/student-mental-health-education-factsheet <br>
+    UOTP Marketing. (2024, January 12). 21 Motivational Strategies for students. University of the Potomac. https://potomac.edu/student-motivation-ideas/
+  </small>
 </footer>
-
 
 <!-- ================= JS ================= -->
 <script>
-// ===== TO-DO LIST =====
-function addTask() {
+  // ===== TO-DO LIST =====
+  function addTask() {
     let input = document.getElementById("todo-input");
     if (input.value.trim() === "") return;
-
     let li = document.createElement("li");
-    li.innerHTML = `
-        <span class="task-text">${input.value}</span>
-        <button class="del-btn" onclick="this.parentElement.remove()">✕</button>
-    `;
-
+    li.innerHTML = `<span class="task-text">${input.value}</span> <button class="del-btn" onclick="this.parentElement.remove()">✕</button>`;
     li.onclick = function(e) {
-        if (e.target.tagName !== "BUTTON") {
-            this.classList.toggle("checked");
-        }
+      if (e.target.tagName !== "BUTTON") {
+        this.classList.toggle("checked");
+      }
     };
-
     document.getElementById("todo-list").appendChild(li);
     input.value = "";
-}
+  }
 
+  // ===== POMODORO TIMER =====
+  let time = 1500; // 25 mins
+  let running = false;
+  let interval;
 
-
-// ===== POMODORO TIMER =====
-let time = 1500; // 25 mins
-let running = false;
-let interval;
-
-function updateDisplay() {
+  function updateDisplay() {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
-    document.getElementById("timer").textContent =
-        `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-}
+    document.getElementById("timer").textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
 
-function startTimer() {
+  function startTimer() {
     if (running) return;
     running = true;
-
     interval = setInterval(() => {
-        time--;
-        updateDisplay();
-        if (time <= 0) {
-            clearInterval(interval);
-            running = false;
-            alert("Time's up! Take a break 🌿");
-        }
+      time--;
+      updateDisplay();
+      if (time <= 0) {
+        clearInterval(interval);
+        running = false;
+        alert("Time's up! Take a break 🌿");
+      }
     }, 1000);
-}
+  }
 
-function pauseTimer() {
+  function pauseTimer() {
     running = false;
     clearInterval(interval);
-}
+  }
 
-function resetTimer() {
+  function resetTimer() {
     running = false;
     clearInterval(interval);
     time = 1500;
     updateDisplay();
-}
-
+  }
 </script>
-
 
 </body>
 </html>

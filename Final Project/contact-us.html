@@ -3,90 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Survival Guide: Student Edition</title>
+<title>Contact Us: Survival Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <style>
-
-    .left-column {flex: 1; min-width: 350px; display: flex; flex-direction: column; gap: 40px;}
-.feedback {
-    display: block;
-    float: left;
-    background: linear-gradient(90deg, #b49670, #4b362a);
-    padding: 35px;
-    border-radius: 30px;
-    width: 675px;
-    border: 4px solid white;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.5);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+/* ================== FEEDBACK & CONTACT ================== */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* LEFT COLUMN */
+.left-column {
+    flex: 1 1 400px;
+    min-width: 350px;
+}
 .left-column h2 {
-    margin-left: 250px;
+    text-align: center;
     margin-bottom: 20px;
 }
-.contact {
-    position: absolute;
-    top: 350px;
-    right: 220px;
-    width: 380px;
+.feedback {
+    background: linear-gradient(90deg, #b49670, #4b362a);
+    padding: 30px;
+    border-radius: 30px;
+    border: 4px solid white;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    align-items: flex-start;
-    text-align: left;
+    gap: 15px;
+    width: 88%;
 }
-
-.contact h2 {
-    margin-top: -30px;
-    margin-left: 65px;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.contact-us {
+.feedback label {
     display: block;
-    width: 450px;
-    height: 100px;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.feedback input,
+.feedback textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 5px;
+}
+.feedback button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: #e8c48c;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.feedback button:hover {
+    background: #f0d8a6;
+}
+
+/* RIGHT COLUMN */
+.right-column {
+    flex: 1 1 300px;
+    min-width: 280px;
+}
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-us {
+    display: flex;
+    align-items: center;
     background: linear-gradient(45deg, #555879, #8889aa);
+    padding: 15px;
     border-radius: 20px;
     border: 4px solid #bdbee0;
-    overflow: hidden;
+    margin-bottom: 20px;
     cursor: pointer;
     box-shadow: 0 12px 40px rgba(0,0,0,0.3);
     transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-    align-self: flex-end;
 }
-
-    .contact-us:hover {
+.contact-us:hover {
     transform: translateY(-5px) scale(1.03) rotate(-0.5deg);
     box-shadow: 0 25px 60px rgba(0,0,0,0.25);
-    background: linear-gradient(#444159); /* slightly lighter gradient on hover */
+    background: #444159;
 }
-
-    .cs img {
+.cs img {
     width: 70px;
     height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
     object-fit: cover;
-    border-radius: 37px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    margin-left: 10px;
-    margin-top: 12px;
+}
+.cs h4 {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
 }
 
-    .cs h4 {
-    margin: 0;
-    font-weight: 600;
-    color: white; /* text color to pop against gradient */
-    font-size: 16px;
-    margin-left: 95px;
-    margin-top: -54px;
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    main { flex-direction: column; align-items: center; }
+    .left-column, .right-column { width: 100%; }
 }
-    </style>
+</style>
+</head>
+<body>
 
 <header>
     <div class="logo"><img src="logo.png" alt="Project Logo"></div>
@@ -106,59 +134,57 @@
 </nav>
 
 <main>
-    <!--LEFT COLUMN-->
-<div class="left-column">
+  <!-- LEFT COLUMN -->
+  <div class="left-column">
     <h2>Send us your feedback!</h2>
     <div class="feedback">
-            <div class="name">
-
-                <label for="fb1">Full Name:</label>
-                <input type="text" id="fb1" class="fb">
-
-                <label for="fb2">Email Address:</label>
-                <input type="text" id="fb2" class="fb"><br>
-
-                <label for="fb3">Subject:</label>
-                <input type="text" id="fb3" class="fb"><br>
-
-                <label for="fb4">Message:</label><br>
-                <textarea id="fb4" class="fb4" rows="15" cols="90" placeholder="Write your message here..."></textarea><br>
-
-                <a href="b2029hpgchan@pshs.edu.ph, b2029jatguiang@pshs.edu.ph?subject=Subject%20of%20the%20message&body=Hello%2C%20I%20would%20like%20to%20send%20a%20message.">
-                <button>Send Message!</button>
-                    </a>    
+      <label for="fb1">Full Name:</label>
+      <input type="text" id="fb1">
+      <label for="fb2">Email Address:</label>
+      <input type="text" id="fb2">
+      <label for="fb3">Subject:</label>
+      <input type="text" id="fb3">
+      <label for="fb4">Message:</label>
+      <textarea id="fb4" rows="10" placeholder="Write your message here..."></textarea>
+      <a href="mailto:b2029hpgchan@pshs.edu.ph,b2029jatguiang@pshs.edu.ph?subject=Feedback&body=Hello!">
+        <button>Send Message!</button>
+      </a>
     </div>
-</div>
+  </div>
 
-<!--RIGHT COLUMN-->
-<div class="right-column">
+  <!-- RIGHT COLUMN -->
+  <div class="right-column">
     <div class="contact">
-        <h2>Contact Us!</h2>
-        <div class="contact-us" onclick="toggleArticle(this)">
-            <div class="cs">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGHJwIgi8_UMv--azYVL8vzHjEh40g2egHA&s" alt="Email 1">
-                <h4>b2029hpgchan@pshs.edu.ph</h4>
-            </div>
+      <h2>Contact Us!</h2>
+
+      <div class="contact-us">
+        <div class="cs">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGHJwIgi8_UMv--azYVL8vzHjEh40g2egHA&s" alt="Email 1">
+          <h4>b2029hpgchan@pshs.edu.ph</h4>
         </div>
-        <div class="contact-us" onclick="toggleArticle(this)">
-            <div class="cs">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGHJwIgi8_UMv--azYVL8vzHjEh40g2egHA&s" alt="Email 2">
-                <h4>b2029jatguiang@pshs.edu.ph</h4>
-            </div>
+      </div>
+
+      <div class="contact-us">
+        <div class="cs">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGHJwIgi8_UMv--azYVL8vzHjEh40g2egHA&s" alt="Email 2">
+          <h4>b2029jatguiang@pshs.edu.ph</h4>
+        </div>
+      </div>
+
     </div>
-</div>
+  </div>
 </main>
 
-<footer>&copy; Chan & Guiang, 2025. All rights reserved.</footer>
-
-<script>
-
-// Toggle featured article
-function toggleArticle(article) {
-    const content = article.querySelector('.article-content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-}
-</script>
+<footer>
+  &copy; Chan & Guiang, 2025. All rights reserved.<br><br>
+  <small>
+    References: <br>
+    7 Mental health awareness tips for college students - Binghamton News. (n.d.). 7 Mental Health Awareness Tips for College Students | Binghamton News - Binghamton University. https://www.binghamton.edu/news/blog/story/4544/7-mental-health-awareness-tips-for-college-students <br>
+    Lparsons. (2024, November 21). 8 Time Management Tips for Students - Harvard Summer School. Harvard Summer School. https://summer.harvard.edu/blog/8-time-management-tips-for-students/ <br>
+    Student Mental Health and Education. (2025, July 9). Learning Policy Institute. https://learningpolicyinstitute.org/product/student-mental-health-education-factsheet <br>
+    UOTP Marketing. (2024, January 12). 21 Motivational Strategies for students. University of the Potomac. https://potomac.edu/student-motivation-ideas/
+  </small>
+</footer>
 
 </body>
 </html>
