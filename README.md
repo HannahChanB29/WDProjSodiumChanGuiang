@@ -10,7 +10,10 @@
 * **About Us**: consists of information about the creators, and the mission and inspiration behind the project.
 * **Survival Tips**: a collection of tips to guide their journey as students along with images.
 * **The Student Zone**: consists of a to-do list wherein students can simply add their tasks, and a Pomodoro Timer.
-* **Contact and Feedback Form**: lets users provide feedback and recommendations.
+* **Contact Us**: lets users provide feedback and recommendations.
+
+## Where Will I Use Forms?
+* We will use forms in the Contact Us page.
 
 ## Definition of done
 * Our definition of done is that if the result of the project looks clean, each feature works, and if the website would be useful (in the perspective of students).
