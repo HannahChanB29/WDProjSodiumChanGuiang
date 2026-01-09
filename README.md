@@ -1,24 +1,3 @@
-# 3rd Qtr Update
-## Final Title: 
-* Survival Guide: Student Edition
-
-## 2-sentence description
-* *Survival Guide: Student Edition* aims to serve as a friendly online companion for navigating school life — from tackling deadlines and managing stress, to keeping motivation alive and finding balance between academics and fun. Whether you’re cramming for exams, struggling to stay focused, or just trying to keep your balance, this website reminds you that you’re not alone in the journey.
-
-## Features
-* **Homepage**: consists of featured articles to guide students and motivational quotes.
-* **About Us**: consists of information about the creators, and the mission and inspiration behind the project.
-* **Survival Tips**: a collection of tips to guide their journey as students along with images.
-* **The Student Zone**: consists of a to-do list wherein students can simply add their tasks, and a Pomodoro Timer.
-* **Contact Us**: lets users provide feedback and recommendations.
-
-## Where Will I Use Forms?
-* We will use forms in the Contact Us page.
-
-## Definition of done
-* Our definition of done is that if the result of the project looks clean, each feature works, and if the website would be useful (in the perspective of students).
-***
-
 # Q2 CS 3 Project Proposal
 ### Na12 Chan & Na16 Guiang
 
@@ -76,3 +55,23 @@ JavaScript will be used to create a Pomodoro Timer. This feature encourages prod
 
 ### Wireframe
 [View our Wireframe!](https://www.canva.com/design/DAG3JtugP8M/3hEu7dS_9qg_tiRW5xYBHA/edit?utm_content=DAG3JtugP8M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+***
+# 3rd Qtr Update
+## Final Title: 
+* Survival Guide: Student Edition
+
+## 2-sentence description
+* *Survival Guide: Student Edition* aims to serve as a friendly online companion for navigating school life — from tackling deadlines and managing stress, to keeping motivation alive and finding balance between academics and fun. Whether you’re cramming for exams, struggling to stay focused, or just trying to keep your balance, this website reminds you that you’re not alone in the journey.
+
+## Features
+* **Homepage**: consists of featured articles to guide students and motivational quotes.
+* **About Us**: consists of information about the creators, and the mission and inspiration behind the project.
+* **Survival Tips**: a collection of tips to guide their journey as students along with images.
+* **The Student Zone**: consists of a to-do list wherein students can simply add their tasks, and a Pomodoro Timer.
+* **Contact Us**: lets users provide feedback and recommendations.
+
+## Where Will I Use Forms?
+* We will use forms in the Contact Us page as a way to recieve feedback and suggestions about the website and their experience.
+
+## Definition of done
+* Our definition of done is that if the result of the project looks clean, each feature works, and if the website would be useful (in the perspective of students).
