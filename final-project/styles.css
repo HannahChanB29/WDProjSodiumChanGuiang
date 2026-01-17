@@ -121,6 +121,7 @@ header {
     font-weight: 700;
     background: linear-gradient(45deg, var(--grad-1-start), var(--grad-1-end));
     -webkit-background-clip: text;
+    background-clip: text; /* Added standard property for compatibility */
     -webkit-text-fill-color: transparent;
     animation: gradientText 5s ease infinite alternate;
 }
