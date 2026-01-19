@@ -224,6 +224,7 @@ main {
 
 .quote {
     text-align: center;
+    margin-top: 15px;
     padding: 40px;
     border-radius: 24px;
     background: linear-gradient(135deg, var(--grad-2-start), var(--grad-2-end));
