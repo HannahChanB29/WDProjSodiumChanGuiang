@@ -23,11 +23,30 @@ main {
 .about {
     background: linear-gradient(145deg, #a5abbd, white);
     padding: 20px;
-    width: 250px;
+    width: 300px;
     height: 550px;
     border-radius: 25px;
     box-shadow: 0 15px 45px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* default/fallback background */
+    background: linear-gradient(145deg, #ec9ea3, #f7dada);
+}
+
+/* Different background for each card */
+main .about:nth-child(1) {
+    background: linear-gradient(145deg, #ec9ea3, #f7dada); /* pink */
+}
+
+main .about:nth-child(2) {
+    background: linear-gradient(145deg, #a1c4fd, #c2e9fb); /* blue */
+}
+
+main .about:nth-child(3) {
+    background: linear-gradient(145deg, #9d7cb3, white); /* purple/pink */
+}
+
+main .about:nth-child(4) {
+    background: linear-gradient(145deg, #fddb92, #d1fdff); /* yellow/teal */
 }
 
 /* Hover effect for cards */
@@ -46,6 +65,8 @@ main {
 }
 
 .about_header h2 {
+    color: white;
+    text-shadow: black 1px 1px 4px;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -55,7 +76,7 @@ main {
     text-align: center;
     padding-top: 26px;
     font-size: 15px;
-    color: #000000;
+    color: black;
     line-height: 1.5;
 }
 </style>
@@ -98,7 +119,7 @@ main {
     <div class="about">
         <div class="about_header">
             <h2>Time Management</h2>
-            <img src="https://www.prevea.com/getmedia/745d2535-de5f-4b8c-825b-20113d6e2d73/Resources_Tips_Tricks_Time_Managment.jpg?width=1280&height=720&ext=.jpg" alt="Time Management"> 
+            <img src="https://www.prevea.com/getmedia/745d2535-de5f-4b8c-825b-20113d6e2d73/Resources_Tips_Tricks_Time_Managment.jpg?width=1280&height=720&ext=.jpg" alt="Time Management" style="width:250px;height:120px;object-fit:cover;border-radius:15px;">
         </div>
         <div class="about_content">
             <p>Effective time management will be the key in balancing your overall life with personal and academic goals. As students, time is everything. We practice producitivty, efficiency, and discipline.</p>
@@ -109,7 +130,7 @@ main {
     <div class="about">
         <div class="about_header">
             <h2>Mental Health</h2>
-            <img src="https://ca-times.brightspotcdn.com/dims4/default/cd10d8e/2147483647/strip/true/crop/2000x1333+0+0/resize/2000x1333!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8e%2Fb7%2F99beae9a4be0bbced1487b04b619%2Fla-hm-nyny-mental-health.jpg" alt="Mental Health">
+            <img src="https://ca-times.brightspotcdn.com/dims4/default/cd10d8e/2147483647/strip/true/crop/2000x1333+0+0/resize/2000x1333!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F8e%2Fb7%2F99beae9a4be0bbced1487b04b619%2Fla-hm-nyny-mental-health.jpg" alt="Mental Health" style="width:250px;height:120px;object-fit:cover;border-radius:15px;">
         </div>
         <div class="about_content">
             <p>Your mental health is a part of your overall well-being, which is why it is important to take care of it. Let us not neglect or overshadow it no matter how busy we are with our lives.</p>
@@ -120,7 +141,7 @@ main {
     <div class="about">
         <div class="about_header">
             <h2>Study Hacks</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3W3RAglYHybvQ6SDqNjFUUi618eZz0Fh2tg&s" alt="Study Hacks">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3W3RAglYHybvQ6SDqNjFUUi618eZz0Fh2tg&s" alt="Study Hacks" style="width:250px;height:120px;object-fit:cover;border-radius:15px;">
         </div>
         <div class="about_content">
             <p>We all have diverse ways of learning, which is why it's important to find the study techniques suited for you. Examples could be quizzing yourself or teaching the material to someone else.</p>
@@ -131,7 +152,7 @@ main {
     <div class="about">
         <div class="about_header" >
             <h2>Remember...</h2>
-            <img src="https://philarmstrong.com/wp-content/uploads/2016/03/Phil-Armstrong-Creative-orange-blogging-man.jpg" alt="Remember">
+            <img src="https://philarmstrong.com/wp-content/uploads/2016/03/Phil-Armstrong-Creative-orange-blogging-man.jpg" alt="Remember" style="width:250px;height:120px;object-fit:cover;border-radius:15px;">
         </div>
         <div class="about_content">
             <p>There is more to life than studying, don't let your academics burden you to the point where you're burned out. Remember, you are still human, you're allowed to have feelings and also struggle. It is important to recognize signs of stress and struggle, don't be afraid to seek for help when needed. You are doing your best and it's something you should be proud of. You're not alone, you've got this!</p>
