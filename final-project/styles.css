@@ -5,8 +5,9 @@
     /* Pastel Gradients */
     --grad-1-start: #e28285; --grad-1-end: #e79ed0; /* Peach/Pink */
     --grad-2-start: #8361d1; --grad-2-end: #d389be; /* Purple/Lilac */
-    --grad-3-start: #239144; --grad-3-end: #8cfa7e; /* Green */
-    --grad-4-start: #416faa; --grad-4-end: #7ea5e9; /* Light Blue/Navy Blue */
+    --grad-3-start: #e4b247; --grad-3-end: #e0be75; /* Green */
+    --grad-4-start: #36974b; --grad-4-end: #5fc99d; /* Light Blue/Navy Blue */
+    --grad-5-start: #43cea2; --grad-5-end: #185a9d; /* Teal/Blue */
 
     /* Text Colors */
     --text-dark: #594A4E;
@@ -271,8 +272,9 @@ main {
 }
 
 .featured-article:nth-of-type(3n+1) { background: linear-gradient(120deg, var(--grad-1-start), var(--grad-1-end)); }
-.featured-article:nth-of-type(3n+2) { background: linear-gradient(120deg, var(--grad-4-start), var(--grad-4-end)); }
+.featured-article:nth-of-type(3n+2) { background: linear-gradient(120deg, var(--grad-5-start), var(--grad-5-end)); }
 .featured-article:nth-of-type(3n+3) { background: linear-gradient(120deg, var(--grad-3-start), var(--grad-3-end)); }
+.featured-article:nth-of-type(3n+4) { background: linear-gradient(120deg, var(--grad-4-start), var(--grad-4-end)); }
 
 .featured-article:hover {
     transform: translateY(-8px) scale(1.03) rotateY(2deg) rotateX(2deg);
