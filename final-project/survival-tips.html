@@ -17,17 +17,34 @@ main {
     gap: 35px;
     padding: 50px 70px;
     justify-items: center;
+    align-items: start;
 }
 
 /* Card design */
 .about {
-    background: linear-gradient(145deg, #a5abbd, white);
     padding: 20px;
-    width: 500px;
-    height: 550px;
+    width: 280px;
+    height: 450px;
     border-radius: 25px;
     box-shadow: 0 15px 45px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Different colors for each card */
+.about:nth-child(1) {
+    background: linear-gradient(120deg, #f7a5b3, #ffc9e3);
+}
+
+.about:nth-child(2) {
+    background: linear-gradient(120deg, #cda4da, #e0d5e6);
+}
+
+.about:nth-child(3) {
+    background: linear-gradient(120deg, #f5df80, #fffde2);
+}
+
+.about:nth-child(4) {
+    background: linear-gradient(120deg, #8bc7db, #cfecf0);
 }
 
 /* Hover effect for cards */
@@ -38,8 +55,8 @@ main {
 
 /* Card header (title + image) */
 .about_header img {
-    width: 250px;
-    height: 150px;
+    width: 100%;
+    height: 120px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -48,21 +65,26 @@ main {
 .about_header h2 {
     text-align: center;
     margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Card content text */
 .about_content {
     text-align: center;
-    padding-top: 26px;
-    font-size: 15px;
-    color: #000000;
-    line-height: 1.5;
+    padding-top: 15px;
+    font-size: 13px;
+    color: black;
+    line-height: 1.4;
+}
+
+.about_content p {
+    margin-bottom: 10px;
 }
 
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 </style>
@@ -71,23 +93,35 @@ body {
 
 <!-- HEADER -->
 <header>
-    <div class="logo"><img src="logo.png" alt="Project Logo"></div>
-    <div class="title">
+  <div class="header-inner">
+
+    <!-- LEFT: Logo + Title -->
+    <div class="logo-title">
+      <img class="logo" src="logo.png" alt="Project Logo">
+      <div class="title-text">
         <h1>Survival Guide: Student Edition</h1>
         <p class="subtitle">Your guide to your journey as a student!</p>
+      </div>
     </div>
+
+    <!-- CENTER: Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="survival-tips.html">Survival Tips</a></li>
+            <li><a href="thestudentzone.html">The Student Zone</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- RIGHT: Empty Spacer -->
+    <div class="spacer"></div>
+
+  </div>
 </header>
 
-<!-- NAV -->
-<nav>
-<ul>
-<li><a href="../index.html">Home</a></li>
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="survival-tips.html">Survival Tips</a></li>
-<li><a href="thestudentzone.html">The Student Zone</a></li>
-<li><a href="contact-us.html">Contact Us</a></li>
-</ul>
-</nav>
+
 
 <!-- MAIN CONTENT -->
 <main>
