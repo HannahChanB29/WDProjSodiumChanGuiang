@@ -88,19 +88,22 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
-    height: 90px;
+    min-height: 90px;
     display: flex;
     justify-content: center;
+    align-items: center; /* Ensures vertical centering */
     animation: fadeUp 0.8s ease forwards;
+    padding: 10px 0;
 }
 
 .header-inner {
     width: var(--main-width);
     max-width: 1400px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .logo-title {
@@ -142,25 +145,37 @@ header {
    NAVIGATION
    ============================ */
 nav {
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
 }
 
 nav ul li a {
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 700;
-    font-size: 14px;
-    padding: 10px 20px;
+    font-size: 13px;
+    padding: 8px 15px;
     border-radius: 25px;
-    position: relative;
+    display: inline-block;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Prevents awkward line breaks */
 }
+
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -346,15 +361,96 @@ footer {
 /* ============================
    RESPONSIVE
    ============================ */
-@media (max-width: 900px) {
-    main { grid-template-columns: 1fr; }
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .intro {
+        order: 1;
+    }
+    
+    .quote {
+        order: 2;
+    }
+
+   .featured {
+        order: 3;
+    }
+
     .header-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --main-width: 95%;
+    }
+
+    header {
         padding: 15px 0;
     }
-    header { height: auto; }
-    .logo-title { justify-content: center; }
-    nav { justify-self: center; }
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+   .logo-title {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .logo-title .title-text h1 {
+        font-size: 18px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+   nav ul {
+        flex-direction: column; /* Stack links vertically for cleaner mobile UI */
+        width: 100%;
+        gap: 8px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+   .article-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .article-header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .article-header h4 {
+        font-size: 17px;
+    }
 }
