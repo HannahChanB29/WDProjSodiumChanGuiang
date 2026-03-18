@@ -93,11 +93,29 @@ JavaScript will be used to create a Pomodoro Timer. This feature encourages prod
 * It will remind them that in this hard and fast-paced journey, they are not alone by providing support, motivation, and inspiration.
 
 ## This project features:
-*
-*
+1. Full CRUD Task Tracker:
+- Users can Create tasks, Read (view) their list, Update task descriptions or status, and Delete completed or irrelevant items, all persisting via localStorage.
+2. Pomodoro Timer:
+- A dynamic countdown timer with start, pause, and reset buttons.
+- Users can modify the length of the focus sessions (e.g., 25 min vs 50 min)
+3. Resource Hub:
+- A collection of survival tips, advices, and articles
+4. Feedback Form
+- A contact form that lets users send feedbacks or suggestions (using HTML and JS validation)
 
 ## But it does not include:
-*
-*
+1. Cloud Synchronization
+- Data is stored locally on the user's browser; it will not sync across different devices or browsers.
+2. User Accounts/Login
+- There is no authentication system; the "Student Zone" is private to the specific machine being used.
 
 ## License
+This project is for educational purposes. Users are granted permission to use and modify the code for personal or learning use, but they may not claim ownership or use it for commercial purposes.
+
+**Submitted by:**
+CHAN, Hannah Princess G. & GUIANG, Jenna Angela T.
+on
+March 18, 2026
+to
+Sir Roy Vincent Canseco
+in partial fulfillment of the requirements of CS 3 of DOST-PSHS-MC.
