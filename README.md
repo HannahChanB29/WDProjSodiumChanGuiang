@@ -87,7 +87,7 @@ JavaScript will be used to create a Pomodoro Timer. This feature encourages prod
 ## This project is for:
 * This project is for students, in general, to act as a tool and aid along their student life. Balancing academics, extracurricular activities, and their personal life can get challenging at times --- which is why Survival Guide: Student Edition is readily available to all to aid in balancing and easing their student life, little by little. This project provides tips, advice, tools, methods, and motivation through the features it provides. It also aims to be a friendly online companion for navigating their school life while finding balance between academics and fun. Hence the name, Survival Guide: Student Edition, which means that the project will hopefully serve as a guide to survive their student life.
 
-## They will love this project because.
+## They will love this project because
 * It will serve as an aid and tool to easing and balancing their student life,
 * It will provide methods, advice, tips, and motivation to keep pushing and moving forward despite the challenges that come with,
 * It will remind them that in this hard and fast-paced journey, they are not alone by providing support, motivation, and inspiration.
