@@ -282,8 +282,10 @@
       <div class="time-selector">
         <label for="time-options">Focus Length: </label>
         <select id="time-options" onchange="setCustomTime()">
-          <option value="1500">25 Minutes</option>
-          <option value="3000">50 Minutes</option>
+          <option value="900">15 Minutes</option>
+          <option value="1500" selected>25 Minutes</option>
+          <option value="1800">30 Minutes</option>
+          <option value="2700">45 Minutes</option>
           <option value="3600">60 Minutes</option>
         </select>
       </div>
@@ -312,7 +314,7 @@
 </footer>
 
 <script>
-  // ===== TO-DO LIST (Full CRUD implemented) =====
+  // ===== TO-DO LIST =====
   
   // Create
   function addTask() {
