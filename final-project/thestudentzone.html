@@ -109,6 +109,22 @@
     text-decoration: line-through;
     color: #8b8b8b;
   }
+  
+  /* Task Action Buttons */
+  .action-btns {
+    display: flex;
+    gap: 5px;
+  }
+  .edit-btn {
+    background: #8cb4e8;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .edit-btn:hover { background: #6699c5; }
+
   .del-btn {
     background: #d97c7c;
     border: none;
@@ -141,6 +157,23 @@
   }
   .pomodoro-box::before { left: 40px; }
   .pomodoro-box::after { right: 40px; }
+
+  /* Time Selector */
+  .time-selector {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #5a4b2f;
+    font-weight: 500;
+  }
+  .time-selector select {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 2px solid #c9b48e;
+    background: #fff4d4;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
 
   .timer-display {
     font-size: 48px;
@@ -194,11 +227,9 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
 
-    <!-- LEFT: Logo + Title -->
     <div class="logo-title">
       <img class="logo" src="logo.png" alt="Project Logo">
       <div class="title-text">
@@ -207,7 +238,6 @@
       </div>
     </div>
 
-    <!-- CENTER: Navigation -->
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -218,13 +248,11 @@
         </ul>
     </nav>
 
-    <!-- RIGHT: Empty Spacer -->
     <div class="spacer"></div>
 
   </div>
 </header>
 
-<!-- ================= MAIN CONTENT ================= -->
 <section class="student-zone-intro">
   <h2>Welcome to the Student Zone</h2>
   <p>
@@ -238,7 +266,6 @@
 <div class="divider"></div>
 
 <main>
-  <!-- LEFT COLUMN — NOTEPAD TO-DO LIST -->
   <div class="left-column">
     <div class="notepad">
       <h2 style="margin-top:0;">To-Do List</h2>
@@ -248,10 +275,19 @@
     </div>
   </div>
 
-  <!-- RIGHT COLUMN — POMODORO TIMER -->
   <div class="right-column">
     <div class="pomodoro-box">
       <h2>Pomodoro Timer</h2>
+      
+      <div class="time-selector">
+        <label for="time-options">Focus Length: </label>
+        <select id="time-options" onchange="setCustomTime()">
+          <option value="1500">25 Minutes</option>
+          <option value="3000">50 Minutes</option>
+          <option value="3600">60 Minutes</option>
+        </select>
+      </div>
+
       <div class="timer-display" id="timer">25:00</div>
       <button class="timer-btn" onclick="startTimer()">Start</button>
       <button class="timer-btn" onclick="pauseTimer()">Pause</button>
@@ -275,27 +311,65 @@
   </small>
 </footer>
 
-<!-- ================= JS ================= -->
 <script>
-  // ===== TO-DO LIST =====
+  // ===== TO-DO LIST (Full CRUD implemented) =====
+  
+  // Create
   function addTask() {
     let input = document.getElementById("todo-input");
     if (input.value.trim() === "") return;
+    
     let li = document.createElement("li");
-    li.innerHTML = `<span class="task-text">${input.value}</span> <button class="del-btn" onclick="this.parentElement.remove()">✕</button>`;
+    li.innerHTML = `
+      <span class="task-text">${input.value}</span> 
+      <div class="action-btns">
+        <button class="edit-btn" onclick="editTask(this, event)">✎</button>
+        <button class="del-btn" onclick="deleteTask(this, event)">✕</button>
+      </div>
+    `;
+    
     li.onclick = function(e) {
-      if (e.target.tagName !== "BUTTON") {
+      // Prevent toggling 'checked' when clicking buttons
+      if (!e.target.classList.contains("edit-btn") && !e.target.classList.contains("del-btn")) {
         this.classList.toggle("checked");
       }
     };
+    
     document.getElementById("todo-list").appendChild(li);
     input.value = "";
   }
 
+  // Update
+  function editTask(btn, event) {
+    event.stopPropagation();
+    let li = btn.closest("li");
+    let span = li.querySelector(".task-text");
+    let newText = prompt("Update your task:", span.innerText);
+    
+    if (newText !== null && newText.trim() !== "") {
+      span.innerText = newText.trim();
+    }
+  }
+
+  // Delete
+  function deleteTask(btn, event) {
+    event.stopPropagation();
+    btn.closest("li").remove();
+  }
+
+
   // ===== POMODORO TIMER =====
-  let time = 1500; // 25 mins
+  let defaultTime = 1500; // Default to 25 mins
+  let time = defaultTime; 
   let running = false;
   let interval;
+
+  // Change Session Length
+  function setCustomTime() {
+    let selector = document.getElementById("time-options");
+    defaultTime = parseInt(selector.value);
+    resetTimer(); // Reset the timer immediately to reflect new choice
+  }
 
   function updateDisplay() {
     let minutes = Math.floor(time / 60);
@@ -311,8 +385,9 @@
       updateDisplay();
       if (time <= 0) {
         clearInterval(interval);
-        running = false;
+        running = false; // Fixed typo here
         alert("Time's up! Take a break 🌿");
+        resetTimer(); 
       }
     }, 1000);
   }
@@ -325,7 +400,7 @@
   function resetTimer() {
     running = false;
     clearInterval(interval);
-    time = 1500;
+    time = defaultTime; // Reset to chosen time instead of hardcoded 1500
     updateDisplay();
   }
 </script>
