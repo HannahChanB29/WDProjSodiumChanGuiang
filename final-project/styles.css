@@ -247,6 +247,7 @@ main {
     color: white;
     box-shadow: 0 10px 25px rgba(161, 140, 209, 0.4);
     transition: transform 0.4s var(--bounce), box-shadow 0.4s ease;
+    will-change: transform, box-shadow;
 }
 .quote:hover {
     transform: translateY(-8px) rotate(-1deg);
@@ -348,15 +349,7 @@ footer {
 /* ============================
    ANIMATIONS
    ============================ */
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-@keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
+
 
 /* ============================
    RESPONSIVE
